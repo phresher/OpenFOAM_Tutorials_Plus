@@ -45,7 +45,7 @@ boundaryField
         value           uniform 0;
     }
 
-    symmety
+    symmetry
     {
         type            fixedValue;
         value           uniform 0;

@@ -1,0 +1,18 @@
+#!/bin/sh
+cd ${0%/*} || exit 1    # Run from this directory
+
+# Source tutorial run functions
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+# Generate the base block mesh
+runApplication blockMesh
+
+cp -r 0.orig 0
+
+# Initialise with potentialFoam solution
+runApplication potentialFoam -pName p_rgh
+
+# Run the solver
+runApplication `getApplication`
+
+# ----------------------------------------------------------------- end-of-file

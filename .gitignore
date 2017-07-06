@@ -8,5 +8,6 @@ processor*
 !0.org
 !0.orig
 *.eMesh
-constant/polyMesh/*
+polyMesh/
 *.OpenFOAM
+dynamicCode

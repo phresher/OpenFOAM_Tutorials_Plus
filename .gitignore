@@ -1,0 +1,12 @@
+*.gz
+log.*
+postProcessing
+*~
+processor*
+[0-9]*
+[0-9]*.[0-9]*
+!0.org
+!0.orig
+*.eMesh
+constant/polyMesh/*
+*.OpenFOAM

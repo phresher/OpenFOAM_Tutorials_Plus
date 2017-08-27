@@ -97,6 +97,23 @@ solvers
         $p_rgh;
         relTol          0;
     };
+
+    "(U|k|B|nuTilda|s)"
+    {
+        solver          smoothSolver;
+        smoother        GaussSeidel;
+        tolerance       1e-05;
+        relTol          0;
+    };
+
+    "(U|k|nuTilda)Final"
+    {
+        $U;
+        tolerance       1e-05;
+        relTol          0;
+    };
+
+
 }
 
 potentialFlow

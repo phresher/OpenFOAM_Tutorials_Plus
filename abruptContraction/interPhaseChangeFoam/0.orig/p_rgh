@@ -23,27 +23,26 @@ boundaryField
 {
     inlet
     {
-        type            fixedValue;
-        value           154820;	//experimental value
+        type            zeroGradient;
     }
 
     outlet
     {
         type            fixedValue;
-        value           100952;	//experimental value
+        value           72000;	//experimental value
     }
 
     walls
     {
-        type            fixedFluxPressure;
+        type            zeroGradient;
     }
     side
     {
-        type            fixedFluxPressure;
+        type            zeroGradient;
     }
     symmetry
     {
-        type            fixedFluxPressure;
+        type            zeroGradient;
     }
 }
 

@@ -23,29 +23,24 @@ boundaryField
 {
     inlet
     {
-        type            pressureInletVelocity;
-		value			$internalField;
+        type            fixedValue;
+	value		uniform (5 0 0);
     }
     outlet
     {
-        type            pressureInletOutletVelocity;
-        phi             phi;
-        value           $internalField;
+        type            zeroGradient;
     }
     side
     {
-        type            fixedValue;
-        value           uniform (0 0 0);
+        type            noSlip;
     }
     walls
     {
-        type            fixedValue;
-        value           uniform (0 0 0);
+        type            noSlip;
     }
     symmetry
     {
-        type            fixedValue;
-        value           uniform (0 0 0);
+        type            noSlip;
     }
 }
 

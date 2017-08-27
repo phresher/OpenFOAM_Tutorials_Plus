@@ -15,8 +15,8 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-//simulationType  LES;
-simulationType  laminar;
+simulationType  LES;
+//simulationType  laminar;
 
 LES
 {

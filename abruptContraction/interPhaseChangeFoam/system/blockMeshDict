@@ -1,0 +1,129 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  4.1                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      blockMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+convertToMeters 	0.01;
+
+h1	18; //Height of the channel before contraction
+h2	9;  //Height of the channel after contraction
+
+l1 	20; //Length of the channel before contraction
+l2 	40; //Length of the channel after contraction
+
+w1	18; //Width of the channel
+
+minX	0;
+minY	-9;
+minZ	0;
+
+midX	#calc "$minX+$l1";
+midZ	#calc "$minZ+$h2";
+
+maxX	#calc "$midX+$l2";
+maxY	#calc "$minY+$w1";
+maxZ	#calc "$minZ+$h1";
+
+vertices
+(
+    ($minX $minY $minZ)      //0
+    ($midX $minY $minZ)
+    ($maxX $minY $minZ)      //2
+    ($minX $minY $midZ)
+    ($midX $minY $midZ)	     //4
+    ($maxX $minY $midZ)
+    ($minX $minY $maxZ)      //6
+    ($midX $minY $maxZ)
+
+    ($minX $maxY $minZ)      //8
+    ($midX $maxY $minZ)
+    ($maxX $maxY $minZ)      //10
+    ($minX $maxY $midZ)
+    ($midX $maxY $midZ)	     //12
+    ($maxX $maxY $midZ)
+    ($minX $maxY $maxZ)      //14
+    ($midX $maxY $maxZ)
+);
+
+blocks
+(
+    hex (0 1 9 8  3 4 12 11) (75 40 60) simpleGrading (0.25 1 0.25)
+    hex (3 4 12 11  6 7 15 14) (75 40 60) simpleGrading (0.25 1 4)
+    hex (1 2 10 9  4 5 13 12) (200 40 60) simpleGrading (2 1 0.25)
+
+);
+
+edges
+(
+);
+
+boundary
+(
+    inlet
+    {
+        type patch;
+        faces
+        (
+            (0 3 11 8)
+            (3 6 14 11)
+        );
+    }
+
+    outlet
+    {
+        type patch;
+        faces
+        (
+            (10 13 5 2)
+        );
+    }
+
+    side
+    {
+        type patch;
+        faces
+        (
+            (0 1 4 3)
+            (1 2 5 4)
+            (3 4 7 6)
+
+            (11 12 9 8)
+            (12 13 10 9)
+            (14 15 12 11)
+        );
+    }
+
+
+    walls
+    {
+        type wall;
+        faces
+        (
+			(6 7 15 14)
+			(4 12 15 7)
+			(4 5 13 12)
+        );
+    }
+
+	symmetry
+	{
+		type patch;
+		faces
+		(
+            (0 8 9 1)
+            (1 9 10 2)
+		);
+	}
+);
+// ************************************************************************* //

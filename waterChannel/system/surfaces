@@ -1,0 +1,28 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     |
+    \\  /    A nd           | Web:      www.OpenFOAM.org
+     \\/     M anipulation  |
+-------------------------------------------------------------------------------
+Description
+    Writes out surface files with interpolated field data in VTK format, e.g.
+    cutting planes, iso-surfaces and patch boundary surfaces.
+
+\*---------------------------------------------------------------------------*/
+
+#includeEtc "caseDicts/postProcessing/visualization/surfaces.cfg"
+
+fields       (U);
+
+surfaces
+(
+    waterSurface
+    {
+        $isosurface;
+        isoField    alpha.water;
+        isoValue    0.50;
+    }
+);
+
+// ************************************************************************* //

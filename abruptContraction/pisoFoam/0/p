@@ -28,7 +28,7 @@ boundaryField
     outlet
     {
         type            fixedValue;
-        value           uniform 1e2;
+        value           uniform 72;
     }
 
     walls

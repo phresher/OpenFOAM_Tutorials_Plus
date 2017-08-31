@@ -23,12 +23,18 @@ boundaryField
 {
     inlet
     {
-        type            fixedValue;
-	value		uniform (5 0 0);
+        type            turbulentInlet;
+        referenceField  uniform (5 0 0);
+        fluctuationScale (0.02 0.01 0.01);
+        value           uniform (5 0 0);
+ 
     }
     outlet
     {
-        type            zeroGradient;
+        type            inletOutlet;
+        inletValue      uniform (0 0 0);
+        value           uniform (0 0 0);
+ 
     }
     side
     {

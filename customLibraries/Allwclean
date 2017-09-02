@@ -1,0 +1,4 @@
+#!/bin/bash
+
+wclean libso app/lib
+wclean app

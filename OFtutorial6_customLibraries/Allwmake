@@ -1,4 +1,0 @@
-#!/bin/bash
-
-wmake libso customLibrary
-wmake

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+make ./app > log.wmake 
+blockMesh -case ./case > log.blockMesh
+basicIO -case ./case | tee log.basicIO 

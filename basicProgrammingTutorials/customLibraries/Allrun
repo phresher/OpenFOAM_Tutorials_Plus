@@ -1,0 +1,5 @@
+#!/bin/bash
+
+./Allwmake
+blockMesh -case case > log.blockMesh
+customClasses -case case | tee log.customClasses 

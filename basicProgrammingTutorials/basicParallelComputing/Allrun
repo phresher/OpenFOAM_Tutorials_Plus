@@ -1,0 +1,3 @@
+wmake ./app > log.wmake 
+blockMesh -case ./case > log.blockMesh
+$FOAM_USER_APPBIN/basicParallelComputing -case ./case | tee log.basicParallelComputing 

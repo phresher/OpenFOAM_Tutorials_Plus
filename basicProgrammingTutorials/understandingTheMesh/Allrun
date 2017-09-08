@@ -1,5 +1,5 @@
 #!/bin/bash
 
-make ./app > log.wmake 
-blockMesh -case ./case > log.blockMesh
-$FOAM_USER_APPBIN/understandingTheMesh -case ./case | tee log.understandingTheMesh 
+wmake app > log.wmake 
+blockMesh -case case > log.blockMesh
+$FOAM_USER_APPBIN/understandingTheMesh -case case | tee log.understandingTheMesh 

@@ -1,4 +1,4 @@
 #!/bin/bash
 
-make ./app > log.wmake 
+wmake app > log.wmake 
 helloWorld | tee log.helloWorld 

@@ -1,5 +1,5 @@
 #!/bin/bash
 
-make app > log.wmake 
+wmake app > log.wmake 
 blockMesh -case case > log.blockMesh
 customClasses -case case | tee log.customClasses 

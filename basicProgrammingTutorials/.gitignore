@@ -1,6 +1,21 @@
 # git-ls-files --others --exclude-from=.git/info/exclude
 # Lines that start with '#' are comments.
 
+
+# Case files
+*.gz
+postProcessing
+*~
+processor*
+[0-9]*
+[0-9]*.[0-9]*
+!0.org
+!0.orig
+*.eMesh
+polyMesh/
+*.OpenFOAM
+dynamicCode
+
 # Log files - anywhere
 log.*
 

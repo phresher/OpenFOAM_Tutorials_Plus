@@ -7,12 +7,13 @@ cd ${0%/*} || exit 1    # Run from this directory
 # Generate the base block mesh
 runApplication blockMesh
 
-# cp -r 0.orig 0
+# Decompose the mesh for parallel
+runApplication decomposePar
 
-# Initialise with potentialFoam solution
-# runApplication potentialFoam -pName p_rgh
+# Run the solver in parallel
+runParallel `getApplication`
 
-# Run the solver
-runApplication `getApplication`
+# Reconstruct the decomposed mesh for postprocessing
+runApplication reconstructPar
 
 # ----------------------------------------------------------------- end-of-file

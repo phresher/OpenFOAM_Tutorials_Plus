@@ -55,7 +55,7 @@ MerkleCoeffs
 SchnerrSauerCoeffs
 {
     n               n      [0 -3 0 0 0 0 0]     1.6e+13;
-    dNuc            dNuc   [0 1 0 0 0 0 0]      2.0e-06;
+    dNuc            dNuc   [0 1 0 0 0 0 0]      2.0e-07;
     Cc              Cc     [0 0 0 0 0 0 0]      1;
     Cv              Cv     [0 0 0 0 0 0 0]      1;
 }

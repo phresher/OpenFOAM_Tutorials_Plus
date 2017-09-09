@@ -34,27 +34,28 @@ int main(int argc, char *argv[])
     #include "createTime.H"
     #include "createMesh.H"
 
+    const word dictName("customProperties");
     // ---
     // Get access to a custom dictionary
-    dictionary customDict;
-    const word dictName("customProperties");
-
+    IOdictionary customDict
+    (
     // Create and input-output object - this holds the path to the dict and its name
-    IOobject dictIO
+    IOobject
     (
         dictName, // name of the file
         mesh.time().constant(), // path to where the file is
         mesh, // reference to the mesh needed by the constructor
         IOobject::MUST_READ // indicate that reading this dictionary is compulsory
+    )
     );
 
     // Check the if the dictionary is present and follows the OF format
-    if (!dictIO.headerOk())
+    if (!customDict.headerOk())
         FatalErrorIn(args.executable()) << "Cannot open specified refinement dictionary "
             << dictName << exit(FatalError);
 
     // Initialise the dictionary object
-    customDict = IOdictionary(dictIO);
+    // customDict = IOdictionary(dictIO);
 
     // ---
     // Read various pieces of information from the main part of the dictionary

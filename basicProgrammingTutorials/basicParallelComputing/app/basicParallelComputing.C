@@ -68,8 +68,8 @@ int main(int argc, char *argv[])
     // Spreading a value across all processors is done using a scatter operation.
     // The Pstream::blocking makes sure all processors are synchronised at this
     // line of the code and thus should use the same value.
-    Pstream::scatter(meshVolume, Pstream::blocking);
-    Pout << "Mesh volume on this processor is now " << meshVolume << endl;
+    // Pstream::scatter(meshVolume, Pstream::blocking);
+    // Pout << "Mesh volume on this processor is now " << meshVolume << endl;
 
     // It is often useful to check the distribution of something across all
     // processors. This may be done using a list, with each element of which

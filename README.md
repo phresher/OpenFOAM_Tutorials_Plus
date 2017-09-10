@@ -1,7 +1,8 @@
 # OpenFOAM Tutorials Plus
-This repository contains several OpenFOAM cases and notes related to my blog [OpenFOAM Studio [in Chinese]](https://zhuanlan.zhihu.com/openfoam).
+This repository contains several OpenFOAM tutorials, cases and notes.
 
 Here's a brief description:
+
 * **linuxCheatSheet**
 
   OpenFOAM Linux Cheat Sheet.
@@ -21,5 +22,9 @@ Here's a brief description:
 * **waterChannel**
 
   Two-phase open channel flow. It's a fork  of the original interFoam tutorial *waterChannel*. The *surfaces* function is configured to generate water surfaces (namely, the isosurfaces where *alpha.water* is equal to 0.5). 
+
+* **programmingTutorials**
+
+  Basic tutorials to show how to programme within the framework of OpenFOAM. Refer to the README file within the folder. 
 
 Pull requests are welcome! Happy foaming!

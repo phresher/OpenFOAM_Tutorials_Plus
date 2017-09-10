@@ -2,9 +2,9 @@
 
 These tutorials show beginners how to programme within the framework of OpenFOAM.
 
-The original edition is created by Artur K Lidtke. The current branch was forked from [BasicOpenFOAMProgrammingTutorials](https://github.com/UnnamedMoose/BasicOpenFOAMProgrammingTutorials) and integrated with [OpenFOAM_Tutorials_Plus](https://github.com/phresher/OpenFOAM_Tutorials_Plus).
+The original edition is created by Artur K Lidtke. The current branch was forked from [BasicOpenFOAMProgrammingTutorials](https://github.com/UnnamedMoose/BasicOpenFOAMProgrammingTutorials) and integrated with [OpenFOAM Tutorials Plus](https://github.com/phresher/OpenFOAM_Tutorials_Plus).
 
-The tutorials have been most recently tested on the official OpenFOAM 4.1 version.
+The tutorials have been most recently tested on the official OpenFOAM 5.0 version.
 
 ### Tutorial 0 - helloWorld
 

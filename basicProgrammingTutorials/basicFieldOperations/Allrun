@@ -1,0 +1,5 @@
+#!/bin/bash
+
+wmake app > log.wmake 
+blockMesh -case case > log.blockMesh
+$FOAM_USER_APPBIN/basicFieldOperations -case case | tee log.basicFieldOperations 

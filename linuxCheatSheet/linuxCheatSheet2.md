@@ -8,7 +8,8 @@ mkdir	[OPTION]... DIRECTORY...
 -p	make parent directories
 ```
 ```bash
-$ mkdir -p $FOAM_RUN
+# 创建 OpenFOAM 运行目录
+mkdir -p $FOAM_RUN
 ```
 
 #### cp & mv ####
@@ -21,5 +22,6 @@ cp & mv	[OPTION]... [-T] SOURCE DEST
 -r	copy(move) directories recursively
 ```
 ```bash
-$ cp -r $FOAM_TUTORIALS .
+# 将 OpenFOAM Tutorials 复制到当前目录
+cp -r $FOAM_TUTORIALS .
 ```

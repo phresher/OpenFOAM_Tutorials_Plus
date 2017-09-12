@@ -14,6 +14,7 @@
 </table>
 
 ```Bash
+# 创建 OpenFOAM 运行目录
 mkdir -p $FOAM_RUN
 ```
 
@@ -41,5 +42,6 @@ mkdir -p $FOAM_RUN
 </table>
 
 ```Bash
+# 将 OpenFOAM Tutorials 复制到当前目录
 cp -r $FOAM_TUTORIALS .
 ```

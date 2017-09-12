@@ -1,6 +1,6 @@
 # Contributing to OpenFOAM Linux Cheat Sheet #
 
-先看下我创建的两个文件 [linuxCheatSheet.md](https://github.com/phresher/OpenFOAM_Tutorials_Plus/blob/md-preview/linuxCheatSheet/linuxCheatSheet.md) 和 [linuxCheatSheet2.md](https://github.com/phresher/OpenFOAM_Tutorials_Plus/blob/md-preview/linuxCheatSheet/linuxCheatSheet2.md)
+先试一下 Mweb 上 OK 的效果，在 GitHub 上能不能显示出来。如果不行的话，看下我创建的两个文件 [linuxCheatSheet.md](https://github.com/phresher/OpenFOAM_Tutorials_Plus/blob/md-preview/linuxCheatSheet/linuxCheatSheet.md) 和 [linuxCheatSheet2.md](https://github.com/phresher/OpenFOAM_Tutorials_Plus/blob/md-preview/linuxCheatSheet/linuxCheatSheet2.md)
 
 linuxCheatSheet.md 在 markdown 文件内使用了 HTML 语言，效果差强人意。在 markdown 内使用 HTML 语言可以解决表格内换行、合并单元格等简单操作，GitHub markdown 不支持某些复杂的 HTML 样式。
 
@@ -14,4 +14,4 @@ linuxCheatSheet.md 在 markdown 文件内使用了 HTML 语言，效果差强人
 
 所以我们不用表格，换用代码框来实现简单的行间对齐功能。这里需要特别注意的是，在 markdown 本身的语法中 tab 键等效于两个空格，因而在一些 markdown 编辑器中按下 tab 键会自动变成两个空格，这时需要修改编辑器设置。
 
-linuxCheatSheet2.md 便采用这种做法，保留了原生的 markdown 风格。希望你喜欢~
+linuxCheatSheet2.md 便采用这种做法，保留了原生的 markdown 风格。

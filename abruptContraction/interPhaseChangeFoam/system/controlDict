@@ -22,13 +22,13 @@ startTime               0;
 
 stopAt                  endTime;
 
-endTime                 1;
+endTime                 0.01;
 
-deltaT                  1e-8;
+deltaT                  1e-5;
 
 writeControl            adjustableRunTime;
 
-writeInterval           0.01;
+writeInterval           0.001;
 
 purgeWrite              0;
 
@@ -42,9 +42,14 @@ timeFormat              general;
 
 runTimeModifiable       yes;
 
-adjustTimeStep          on;
+adjustTimeStep          off;
 
 maxCo                   1;
 
+functions
+{
+    #includeFunc "surfaces"
+    #includeFunc "probes"
+}
 
 // ************************************************************************* //

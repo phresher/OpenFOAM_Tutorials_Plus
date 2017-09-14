@@ -25,11 +25,11 @@ stopAt          endTime;
 
 endTime         0.1;
 
-deltaT          5e-06;
+deltaT          1e-05;
 
-writeControl    timeStep;
+writeControl    runTime;
 
-writeInterval   100;
+writeInterval   0.01;
 
 purgeWrite      0;
 
@@ -47,31 +47,8 @@ runTimeModifiable true;
 
 functions
 {
-    probes
-    {
-        type            probes;
-        libs            ("libsampling.so");
-        writeControl    timeStep;
-        writeInterval   1;
-
-        fields
-        (
-            p
-        );
-
-        probeLocations
-        (
-		(0.1 0 0.09)
-		(0.15 0 0.09)
-		(0.215 0 0)
-		(0.245 0 0)
-		(0.275 0 0)
-		(0.375 0 0)
-		(0.555 0 0)
-        );
-
-    }
-
+    #includeFunc "surfaces"
+    #includeFunc "probes"
 }
 
 // ************************************************************************* //

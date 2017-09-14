@@ -23,13 +23,13 @@ startTime       0;
 
 stopAt          endTime;
 
-endTime         0.3;
+endTime         0.1;
 
 deltaT          5e-6;
 
-writeControl    adjustableRunTime;
+writeControl    runTime;
 
-writeInterval   0.001;
+writeInterval   0.01;
 
 purgeWrite      0;
 
@@ -51,6 +51,7 @@ maxCo           5;
 
 functions
 {
-    #includeFunc	probes
+    #includeFunc	"probes"
+    #includeFunc	"surfaces"
 }
 // ************************************************************************* //

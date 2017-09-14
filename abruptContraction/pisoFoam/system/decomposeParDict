@@ -9,47 +9,21 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       volScalarField;
-    object      nuTilda;
+    class       dictionary;
+    note        "mesh decomposition control dictionary";
+    object      decomposeParDict;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-dimensions      [0 2 -1 0 0 0 0];
+numberOfSubdomains 2;
 
-internalField   uniform 0;
+method          simple;
 
-boundaryField
+simpleCoeffs
 {
-    inlet
-    {
-        type            fixedValue;
-        value           uniform 0;
-    }
-
-    outlet
-    {
-        type            inletOutlet;
-        inletValue      uniform 0;
-        value           uniform 0;
-    }
-
-    side
-    {
-        type            fixedValue;
-        value           uniform 0;
-    }
-
-    walls
-    {
-        type            fixedValue;
-        value           uniform 0;
-    }
-
-    symmetry
-    {
-        type            fixedValue;
-        value           uniform 0;
-    }
+    n               (1 2 1);
+    delta           0.001;
 }
+
 
 // ************************************************************************* //

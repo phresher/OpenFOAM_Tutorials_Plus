@@ -1,7 +1,7 @@
 /*--------------------------------*- C++ -*----------------------------------*\
 | =========                 |                                                 |
 | \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
-|  \\    /   O peration     | Version:  3.0.0                                 |
+|  \\    /   O peration     | Version:  4.1                                   |
 |   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
 |    \\/     M anipulation  |                                                 |
 \*---------------------------------------------------------------------------*/
@@ -9,42 +9,21 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       volScalarField;
-    location    "0";
-    object      p_rgh;
+    class       dictionary;
+    note        "mesh decomposition control dictionary";
+    object      decomposeParDict;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-dimensions      [1 -1 -2 0 0];
+numberOfSubdomains 2;
 
-internalField   uniform 72637;
+method          simple;
 
-boundaryField
+simpleCoeffs
 {
-    inlet
-    {
-        type            fixedValue;
-        value           119860;	//experimental value
-    }
-
-    outlet
-    {
-        type            fixedValue;
-        value           72637;	//experimental value
-    }
-
-    walls
-    {
-        type            fixedFluxPressure;
-    }
-    side
-    {
-        type            fixedFluxPressure;
-    }
-    symmetry
-    {
-        type            fixedFluxPressure;
-    }
+    n               (1 2 1);
+    delta           0.001;
 }
+
 
 // ************************************************************************* //

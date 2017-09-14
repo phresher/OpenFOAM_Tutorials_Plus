@@ -13,3 +13,4 @@ processor*
 polyMesh/
 *.OpenFOAM
 dynamicCode
+sequencedVTK/

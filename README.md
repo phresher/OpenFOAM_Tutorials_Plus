@@ -23,6 +23,10 @@ Here's a brief description:
 
   Two-phase open channel flow. It's a fork  of the original interFoam tutorial *waterChannel*. The *surfaces* function is configured to generate water surfaces (namely, the isosurfaces where *alpha.water* is equal to 0.5). 
 
+* **cavitatingBullet**
+
+  The simplified version of the original cavitatingBullet case. The initialization process using potentialFoam is removed in this version to show the basic usage of interPhaseChangeFoam. 
+
 * **programmingTutorials**
 
   Basic tutorials to show how to programme within the framework of OpenFOAM. Refer to the README file within the folder. 

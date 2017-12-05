@@ -1,0 +1,11 @@
+#!/bin/bash
+
+./helloWorld/Allrun
+./basicIO/Allrun
+./understandingTheMesh/Allrun
+./basicFieldOperations/Allrun
+./basicParallelComputing/Allrun
+./customClasses/Allrun
+./customLibraries/Allrun
+./customBC/Allrun
+./transportEquation/Allrun

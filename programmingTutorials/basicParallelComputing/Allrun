@@ -1,3 +1,6 @@
+#!/bin/bash
+cd ${0%/*} || exit 1	# run from this directory
+
 wmake app > log.wmake 
 blockMesh -case case > log.blockMesh
-$FOAM_USER_APPBIN/basicParallelComputing -case case | tee log.basicParallelComputing 
+basicParallelComputing -case case | tee log.basicParallelComputing 

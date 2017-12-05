@@ -1,5 +1,6 @@
 #!/bin/sh
+cd ${0%/*} || exit 1	# run from this directory
 
-wclean libso
+wclean app > /dev/null 2>&1
 
 # ----------------------------------------------------------------- end-of-file

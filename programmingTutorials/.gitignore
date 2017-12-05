@@ -101,3 +101,6 @@ doc/Doxygen/DTAGS
 
 # Ignore the test directory
 /tutorialsTest
+
+# Other specific files in this tutorial
+transportEquation/case/0/result

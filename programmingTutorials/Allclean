@@ -1,0 +1,12 @@
+#!/bin/bash
+cd ${0%/*} || exit 1	# run from this directory
+
+./helloWorld/Allclean
+./basicIO/Allclean
+./understandingTheMesh/Allclean
+./basicFieldOperations/Allclean
+./basicParallelComputing/Allclean
+./customClasses/Allclean
+./customLibraries/Allclean
+./customBC/Allclean
+./transportEquation/Allclean

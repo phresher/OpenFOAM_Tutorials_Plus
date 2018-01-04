@@ -118,7 +118,7 @@ boundary
 
 	symmetry
 	{
-		type patch;
+		type symmetry;
 		faces
 		(
             (0 8 9 1)

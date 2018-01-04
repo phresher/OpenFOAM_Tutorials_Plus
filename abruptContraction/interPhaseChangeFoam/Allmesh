@@ -22,7 +22,9 @@ refineMeshByCellSet()
 }
 
 runApplication blockMesh
-refineMeshByCellSet 1 2
-runApplication refineWallLayer -overwrite '(walls)' 0.2
+refineMeshByCellSet 1
+refineWallLayer -overwrite '(walls)' 0.2 >> log.refineWallLayer.1
+
+
 
 #------------------------------------------------------------------------------

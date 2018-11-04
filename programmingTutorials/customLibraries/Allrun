@@ -1,6 +1,0 @@
-#!/bin/bash
-cd ${0%/*} || exit 1	# run from this directory
-
-./Allwmake
-blockMesh -case case > log.blockMesh
-customLibraries -case case | tee log.customLibraries 

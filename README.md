@@ -29,6 +29,6 @@ Here's a brief description:
 
 * **programmingTutorials**
 
-  Basic tutorials to show how to programme within the framework of OpenFOAM. Refer to the README file within the folder. 
+  Basic tutorials to show how to programme within the framework of OpenFOAM. Refer to the README file within the folder.
 
 Pull requests are welcome! Happy foaming!

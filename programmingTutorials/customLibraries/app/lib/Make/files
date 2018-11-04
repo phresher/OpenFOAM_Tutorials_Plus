@@ -1,3 +1,0 @@
-abcLibrary.C
-
-LIB = $(FOAM_USER_LIBBIN)/libabcLibrary

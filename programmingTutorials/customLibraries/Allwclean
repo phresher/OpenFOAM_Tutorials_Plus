@@ -1,5 +1,0 @@
-#!/bin/bash
-cd ${0%/*} || exit 1	# run from this directory
-
-wclean libso app/lib > /dev/null 2>&1
-wclean app > /dev/null 2>&1

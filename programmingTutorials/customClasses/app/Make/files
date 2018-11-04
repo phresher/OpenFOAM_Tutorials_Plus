@@ -1,5 +1,0 @@
-abcClass.C
-myDict.C
-customClasses.C
-
-EXE = $(FOAM_USER_APPBIN)/customClasses

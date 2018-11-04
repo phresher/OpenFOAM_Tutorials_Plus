@@ -1,25 +1,6 @@
 # git-ls-files --others --exclude-from=.git/info/exclude
 # Lines that start with '#' are comments.
 
-
-# Case files
-*.gz
-postProcessing
-*~
-processor*
-[0-9]*
-[0-9]*.[0-9]*
-!0.org
-!0.orig
-!0
-*.eMesh
-polyMesh/
-*.OpenFOAM
-dynamicCode
-
-# Log files - anywhere
-log.*
-
 # Editor and misc backup files - anywhere
 *~
 .*~
@@ -98,9 +79,7 @@ doc/Doxygen/DTAGS
 /.cproject
 /.project
 /.dir-locals.el
+/.dropbox
 
 # Ignore the test directory
 /tutorialsTest
-
-# Other specific files in this tutorial
-transportEquation/case/0/result

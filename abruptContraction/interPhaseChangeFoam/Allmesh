@@ -12,7 +12,6 @@ refineMeshByCellSet()
       then
           echo "Creating cell set for primary zone - $1"
           topoSet -dict system/topoSetDict.$1 > log.topoSet.$1 2>&1
-
           echo "Refining primary zone - $1"
           refineMesh -dict system/refineMeshDict.$1 -overwrite \
               > log.refineMesh.$1 2>&1

@@ -15,10 +15,6 @@ Here's a brief description:
 
   Abrupt contraction of a rectangular channel where cavitation occures. The *blockMeshDict* is written with variables. *interPhaseChangeFoam*, *pisoFoam* and  *pimpleFoam* are used.
 
-* **abruptContractionPar**
-
-  Parallel edition of abruptContraction.
-
 * **waterChannel**
 
   Two-phase open channel flow. It's a fork  of the original interFoam tutorial *waterChannel*. The *surfaces* function is configured to generate water surfaces (namely, the isosurfaces where *alpha.water* is equal to 0.5). 

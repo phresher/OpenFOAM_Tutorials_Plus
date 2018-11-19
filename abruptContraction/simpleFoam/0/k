@@ -10,11 +10,11 @@ FoamFile
     version     2.0;
     format      ascii;
     class       volScalarField;
-    object      nuTilda;
+    object      k;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-dimensions      [0 2 -1 0 0 0 0];
+dimensions      [0 2 -2 0 0 0 0];
 
 internalField   uniform 0;
 
@@ -23,7 +23,7 @@ boundaryField
     inlet
     {
         type            fixedValue;
-        value           uniform 0;
+        value           uniform 2e-05;
     }
 
     outlet
@@ -47,8 +47,7 @@ boundaryField
 
     symmetry
     {
-        type            fixedValue;
-        value           uniform 0;
+        type            symmetry;
     }
 }
 

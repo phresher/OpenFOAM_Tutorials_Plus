@@ -19,7 +19,7 @@ convertToMeters 	0.01;
 h1	18; //Height of the channel before contraction
 h2	9;  //Height of the channel after contraction
 
-l1 	20; //Length of the channel before contraction
+l1 	40; //Length of the channel before contraction
 l2 	40; //Length of the channel after contraction
 
 w1	18; //Width of the channel
@@ -58,9 +58,9 @@ vertices
 
 blocks
 (
-    hex (0 1 9 8  3 4 12 11) (75 40 60) simpleGrading (0.25 1 0.25)
-    hex (3 4 12 11  6 7 15 14) (75 40 60) simpleGrading (0.25 1 4)
-    hex (1 2 10 9  4 5 13 12) (200 40 60) simpleGrading (2 1 0.25)
+    hex (0 1 9 8  3 4 12 11) (80 40 20) simpleGrading (0.5 1 0.5)
+    hex (3 4 12 11  6 7 15 14) (80 40 20) simpleGrading (0.5 1 2)
+    hex (1 2 10 9  4 5 13 12) (80 40 20) simpleGrading (2 1 0.5) 
 
 );
 
@@ -118,7 +118,7 @@ boundary
 
 	symmetry
 	{
-		type patch;
+		type symmetry;
 		faces
 		(
             (0 8 9 1)

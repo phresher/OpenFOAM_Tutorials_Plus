@@ -9,44 +9,20 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       volVectorField;
-    location    "0";
-    object      U;
+    class       dictionary;
+    note        "mesh decomposition control dictionary";
+    object      decomposeParDict;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-dimensions      [0 1 -1 0 0 0 0];
+numberOfSubdomains 2;
 
-internalField   uniform (0 0 0);
+method          simple;
 
-boundaryField
+simpleCoeffs
 {
-    inlet
-    {
-        type            pressureInletVelocity;
-		value			$internalField;
-    }
-    outlet
-    {
-        type            pressureInletOutletVelocity;
-        phi             phi;
-        value           $internalField;
-    }
-    side
-    {
-        type            fixedValue;
-        value           uniform (0 0 0);
-    }
-    walls
-    {
-        type            fixedValue;
-        value           uniform (0 0 0);
-    }
-    symmetry
-    {
-        type            fixedValue;
-        value           uniform (0 0 0);
-    }
+    n               (1 2 1);
+    delta           0.001;
 }
 
 

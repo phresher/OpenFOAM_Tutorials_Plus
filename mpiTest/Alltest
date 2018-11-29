@@ -1,6 +1,6 @@
 #!/bin/sh
 mpiCase (){
-    foamCloneCase damBreak4phaseFine damBreak4phaseFine$1 \
+    cp -r damBreak4phaseFine damBreak4phaseFine$1 \
         >> /dev/null
     sed -i '18cnumberOfSubdomains '$1';' \
         damBreak4phaseFine$1/system/decomposeParDict
@@ -8,10 +8,10 @@ mpiCase (){
         damBreak4phaseFine$1/Allsbatch
     sed -i 's/damBreak4phaseFine/damBreak4phaseFine'$1'/g' \
        damBreak4phaseFine$1/Allsbatch
-    sbatch ./damBreak4phaseFine$1/Allsbatch
+#    sbatch ./damBreak4phaseFine$1/Allsbatch
 }
 serialCase (){
-    foamCloneCase damBreak4phaseFine damBreak4phaseFine1 \
+    cp -r damBreak4phaseFine damBreak4phaseFine1 \
         >> /dev/null
     rm damBreak4phaseFine1/system/decomposeParDict
     sed -i '15cmultiphaseEulerFoam' \
@@ -22,8 +22,8 @@ serialCase (){
         damBreak4phaseFine1/Allsbatch
     sed -i '3d' \
         damBreak4phaseFine1/Allsbatch
-    sbatch ./damBreak4phaseFine1/Allsbatch
+#    sbatch ./damBreak4phaseFine1/Allsbatch
 }
 mpiCase 16
-#serialCase
+serialCase
 #------------------------------------------------------------------------------

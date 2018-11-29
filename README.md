@@ -23,6 +23,10 @@ Here's a brief description:
 
   The simplified version of the original cavitatingBullet case. The initialization process using potentialFoam is removed in this version to show the basic usage of interPhaseChangeFoam. 
 
+* **mpiTest**
+ 
+  Parallel test for clusters using slurm job management tool. It can also be used on other platforms i.e. workstation after small modification. The case is based on damBreak4PhasesFine with multiphaseEulerFoam. 
+
 * **programmingTutorials**
 
   Basic tutorials to show how to programme within the framework of OpenFOAM. Refer to the README file within the folder.

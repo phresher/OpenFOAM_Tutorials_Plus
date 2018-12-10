@@ -1,0 +1,18 @@
+#!/bin/sh
+cd ${0%/*} || exit 1    # Run from this directory
+
+# Source tutorial run functions
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+# Generate the mesh
+runApplication gmsh -3 magnus.geo
+runApplication gmshToFoam magnus.msh
+
+# Modify the boundary conditions
+sed -i '22s/patch/empty/' constant/polyMesh/boundary
+sed -i '29s/patch/wall/' constant/polyMesh/boundary
+
+# Run the solver
+runApplication `getApplication`
+
+# ----------------------------------------------------------------- end-of-file

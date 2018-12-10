@@ -11,6 +11,10 @@ Here's a brief description:
 
   A simple 2D geometry is used to show the development of a turbulent boundary layer. It's an exercise of [Flow over a flat plate - YouTube](https://youtu.be/69Nna1UjICI).
 
+* **magnusEffect**
+
+  A rotating cylinder in free stream to show magnus effect. Gmsh is used to generate mesh.
+
 * **abruptContraction**
 
   Abrupt contraction of a rectangular channel where cavitation occures. The *blockMeshDict* is written with variables. *interPhaseChangeFoam*, *pisoFoam* and  *pimpleFoam* are used.

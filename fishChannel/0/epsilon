@@ -1,0 +1,175 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      binary;
+    class       volScalarField;
+    location    "0";
+    object      epsilon;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -3 0 0 0 0];
+
+internalField   uniform 0.001;
+
+boundaryField
+{
+    inlet
+    {
+        type            turbulentMixingLengthDissipationRateInlet;
+        mixingLength    0.001;
+        value           uniform 0;
+    }
+    walls
+    {
+        type            epsilonWallFunction;
+        value           uniform 0;
+    }
+    outlet
+    {
+        type            zeroGradient;
+    }
+    atmosphere
+    {
+        type            zeroGradient;
+    }
+    outlet2
+    {
+        type            zeroGradient;
+    }
+    baffle1
+    {
+        type            epsilonWallFunction;
+        value           uniform 0;
+    }
+    baffle2
+    {
+        type            epsilonWallFunction;
+        value           uniform 0;
+    }
+    baffle3
+    {
+        type            epsilonWallFunction;
+        value           uniform 0;
+    }
+    baffle4
+    {
+        type            epsilonWallFunction;
+        value           uniform 0;
+    }
+    baffle5
+    {
+        type            epsilonWallFunction;
+        value           uniform 0;
+    }
+    baffle6
+    {
+        type            epsilonWallFunction;
+        value           uniform 0;
+    }
+    baffle7
+    {
+        type            epsilonWallFunction;
+        value           uniform 0;
+    }
+    baffle8
+    {
+        type            epsilonWallFunction;
+        value           uniform 0;
+    }
+    baffle9
+    {
+        type            epsilonWallFunction;
+        value           uniform 0;
+    }
+    baffle10
+    {
+        type            epsilonWallFunction;
+        value           uniform 0;
+    }
+    baffle11
+    {
+        type            epsilonWallFunction;
+        value           uniform 0;
+    }
+    baffle12
+    {
+        type            epsilonWallFunction;
+        value           uniform 0;
+    }
+    baffle13
+    {
+        type            epsilonWallFunction;
+        value           uniform 0;
+    }
+    baffle14
+    {
+        type            epsilonWallFunction;
+        value           uniform 0;
+    }
+    baffle15
+    {
+        type            epsilonWallFunction;
+        value           uniform 0;
+    }
+    baffle16
+    {
+        type            epsilonWallFunction;
+        value           uniform 0;
+    }
+    baffle17
+    {
+        type            epsilonWallFunction;
+        value           uniform 0;
+    }
+    baffle18
+    {
+        type            epsilonWallFunction;
+        value           uniform 0;
+    }
+    baffle19
+    {
+        type            epsilonWallFunction;
+        value           uniform 0;
+    }
+    baffle20
+    {
+        type            epsilonWallFunction;
+        value           uniform 0;
+    }
+    baffle21
+    {
+        type            epsilonWallFunction;
+        value           uniform 0;
+    }
+    baffle22
+    {
+        type            epsilonWallFunction;
+        value           uniform 0;
+    }
+    baffle23
+    {
+        type            epsilonWallFunction;
+        value           uniform 0;
+    }
+    baffle24
+    {
+        type            epsilonWallFunction;
+        value           uniform 0;
+    }
+    baffle25
+    {
+        type            epsilonWallFunction;
+        value           uniform 0;
+    }
+}
+
+
+// ************************************************************************* //

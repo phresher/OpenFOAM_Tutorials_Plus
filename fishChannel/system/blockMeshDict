@@ -1,0 +1,136 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      blockMeshDict;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+convertToMeters 1;
+
+upstreamBottomElevation 372.8;
+
+downstreamBottomElevation 372.2;
+
+length 121;
+
+height 2;
+
+width 1;
+
+upstreamMiddleElevation #calc "$upstreamBottomElevation+$height/2";
+
+downstreamMiddleElevation #calc "$downstreamBottomElevation+$height/2";
+
+upstreamTopElevation #calc "$upstreamBottomElevation+$height";
+
+downstreamTopElevation #calc "$downstreamBottomElevation+$height";
+
+leftSideWall #calc "$width";
+
+rightSideWall 0;
+
+vertices
+(
+    (0 $leftSideWall $upstreamBottomElevation) // 0
+    (0 $leftSideWall $upstreamMiddleElevation) // 1
+    (0 $leftSideWall $upstreamTopElevation) //2
+    (0 $rightSideWall $upstreamBottomElevation) // 3
+    (0 $rightSideWall $upstreamMiddleElevation) // 4
+    (0 $rightSideWall $upstreamTopElevation) // 5
+
+    (1 $leftSideWall $upstreamBottomElevation) // 6
+    (1 $leftSideWall $upstreamMiddleElevation) // 7
+    (1 $leftSideWall $upstreamTopElevation) // 8
+    (1 $rightSideWall $upstreamBottomElevation) // 9
+    (1 $rightSideWall $upstreamMiddleElevation) // 10
+    (1 $rightSideWall $upstreamTopElevation) // 11
+
+    ($length $leftSideWall $downstreamBottomElevation) // 12
+    ($length $leftSideWall $downstreamMiddleElevation) // 13
+    ($length $leftSideWall $downstreamTopElevation) // 14
+    ($length $rightSideWall $downstreamBottomElevation) // 15
+    ($length $rightSideWall $downstreamMiddleElevation) // 16
+    ($length $rightSideWall $downstreamTopElevation) // 17
+);
+
+blocks
+(
+    // x = 0 ~ 1 m
+    hex (3 9 6 0 4 10 7 1) (5 10 20) simpleGrading (1 1 1)
+    hex (4 10 7 1 5 11 8 2) (5 10 20) simpleGrading (1 1 1)
+
+    // x = 1 ~ 120 m
+    hex (9 15 12 6 10 16 13 7) (600 10 20) simpleGrading (1 1 1)
+    hex (10 16 13 7 11 17 14 8) (600 10 20) simpleGrading (1 1 1)
+);
+
+edges
+(
+);
+
+boundary
+(
+    inlet
+    {
+        type patch;
+        faces
+        (
+            (0 1 7 6)
+        );
+    }
+
+    walls
+    {
+        type wall;
+        faces
+        (
+            // bottom
+            (6 9 3 0)
+            (12 15 9 6)
+            // right side wall
+            (3 9 10 4)
+            (4 10 11 5)
+            (9 15 16 10)
+            (10 16 17 11)
+            // left side wall
+            (2 8 7 1)
+            (7 13 12 6)
+            (8 14 13 7)
+            // upper wall
+            (0 3 4 1)
+            (1 4 5 2)
+        );
+    }
+
+    outlet
+    {
+        type patch;
+        faces
+        (
+            (12 13 16 15)
+            (13 14 17 16)
+        );
+    }
+
+    atmosphere
+    {
+        type patch;
+        faces
+        (
+            (2 5 11 8)
+            (8 11 17 14)
+        );
+    }
+);
+
+// ************************************************************************* //

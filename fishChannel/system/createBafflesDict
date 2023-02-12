@@ -1,0 +1,583 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      createBafflesDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// Whether to convert internal faces only (so leave boundary faces intact).
+// This is only relevant if your face selection type can pick up boundary
+// faces.
+internalFacesOnly true;
+
+fields false;
+
+// Baffles to create.
+baffles
+{
+    baffle1g
+    {
+        //- Select faces and orientation through a searchableSurface
+        type        searchableSurface;
+        surface     searchablePlate;
+        origin      (5 0.3 372.2);
+        span        (0 0.7 3);
+        patches
+        {
+            master
+            {
+                //- Master side patch
+                name            baffle1;
+                type            wall;
+            }
+            slave
+            {
+                //- Slave side patch
+                ${..master}
+            }
+        }
+    }
+    baffle2g
+    {
+        //- Select faces and orientation through a searchableSurface
+        type        searchableSurface;
+        surface     searchablePlate;
+        origin      (10 0 372.2);
+        span        (0 0.7 3);
+        patches
+        {
+            master
+            {
+                //- Master side patch
+                name            baffle2;
+                type            wall;
+            }
+            slave
+            {
+                //- Slave side patch
+                ${..master}
+            }
+        }
+    }
+    baffle3g
+    {
+        //- Select faces and orientation through a searchableSurface
+        type        searchableSurface;
+        surface     searchablePlate;
+        origin      (15 0.3 372.2);
+        span        (0 0.7 3);
+        patches
+        {
+            master
+            {
+                //- Master side patch
+                name            baffle3;
+                type            wall;
+            }
+            slave
+            {
+                //- Slave side patch
+                ${..master}
+            }
+        }
+    }
+    baffle4g
+    {
+        //- Select faces and orientation through a searchableSurface
+        type        searchableSurface;
+        surface     searchablePlate;
+        origin      (20 0 372.2);
+        span        (0 0.7 3);
+        patches
+        {
+            master
+            {
+                //- Master side patch
+                name            baffle4;
+                type            wall;
+            }
+            slave
+            {
+                //- Slave side patch
+                ${..master}
+            }
+        }
+    }
+    baffle5g
+    {
+        //- Select faces and orientation through a searchableSurface
+        type        searchableSurface;
+        surface     searchablePlate;
+        origin      (25 0.3 372.2);
+        span        (0 0.7 3);
+        patches
+        {
+            master
+            {
+                //- Master side patch
+                name            baffle5;
+                type            wall;
+            }
+            slave
+            {
+                //- Slave side patch
+                ${..master}
+            }
+        }
+    }
+    baffle6g
+    {
+        //- Select faces and orientation through a searchableSurface
+        type        searchableSurface;
+        surface     searchablePlate;
+        origin      (30 0 372.2);
+        span        (0 0.7 3);
+        patches
+        {
+            master
+            {
+                //- Master side patch
+                name            baffle6;
+                type            wall;
+            }
+            slave
+            {
+                //- Slave side patch
+                ${..master}
+            }
+        }
+    }
+    baffle7g
+    {
+        //- Select faces and orientation through a searchableSurface
+        type        searchableSurface;
+        surface     searchablePlate;
+        origin      (35 0.3 372.2);
+        span        (0 0.7 3);
+        patches
+        {
+            master
+            {
+                //- Master side patch
+                name            baffle7;
+                type            wall;
+            }
+            slave
+            {
+                //- Slave side patch
+                ${..master}
+            }
+        }
+    }
+    baffle8g
+    {
+        //- Select faces and orientation through a searchableSurface
+        type        searchableSurface;
+        surface     searchablePlate;
+        origin      (40 0 372.2);
+        span        (0 0.7 3);
+        patches
+        {
+            master
+            {
+                //- Master side patch
+                name            baffle8;
+                type            wall;
+            }
+            slave
+            {
+                //- Slave side patch
+                ${..master}
+            }
+        }
+    }
+    baffle9g
+    {
+        //- Select faces and orientation through a searchableSurface
+        type        searchableSurface;
+        surface     searchablePlate;
+        origin      (45 0.3 372.2);
+        span        (0 0.7 3);
+        patches
+        {
+            master
+            {
+                //- Master side patch
+                name            baffle9;
+                type            wall;
+            }
+            slave
+            {
+                //- Slave side patch
+                ${..master}
+            }
+        }
+    }
+    baffle10g
+    {
+        //- Select faces and orientation through a searchableSurface
+        type        searchableSurface;
+        surface     searchablePlate;
+        origin      (50 0 372.2);
+        span        (0 0.7 3);
+        patches
+        {
+            master
+            {
+                //- Master side patch
+                name            baffle10;
+                type            wall;
+            }
+            slave
+            {
+                //- Slave side patch
+                ${..master}
+            }
+        }
+    }
+    baffle11g
+    {
+        //- Select faces and orientation through a searchableSurface
+        type        searchableSurface;
+        surface     searchablePlate;
+        origin      (55 0.3 372.2);
+        span        (0 0.7 3);
+        patches
+        {
+            master
+            {
+                //- Master side patch
+                name            baffle11;
+                type            wall;
+            }
+            slave
+            {
+                //- Slave side patch
+                ${..master}
+            }
+        }
+    }
+    baffle12g
+    {
+        //- Select faces and orientation through a searchableSurface
+        type        searchableSurface;
+        surface     searchablePlate;
+        origin      (60 0 372.2);
+        span        (0 0.7 3);
+        patches
+        {
+            master
+            {
+                //- Master side patch
+                name            baffle12;
+                type            wall;
+            }
+            slave
+            {
+                //- Slave side patch
+                ${..master}
+            }
+        }
+    }
+    baffle13g
+    {
+        //- Select faces and orientation through a searchableSurface
+        type        searchableSurface;
+        surface     searchablePlate;
+        origin      (65 0.3 372.2);
+        span        (0 0.7 3);
+        patches
+        {
+            master
+            {
+                //- Master side patch
+                name            baffle13;
+                type            wall;
+            }
+            slave
+            {
+                //- Slave side patch
+                ${..master}
+            }
+        }
+    }
+    baffle14g
+    {
+        //- Select faces and orientation through a searchableSurface
+        type        searchableSurface;
+        surface     searchablePlate;
+        origin      (70 0 372.2);
+        span        (0 0.7 3);
+        patches
+        {
+            master
+            {
+                //- Master side patch
+                name            baffle14;
+                type            wall;
+            }
+            slave
+            {
+                //- Slave side patch
+                ${..master}
+            }
+        }
+    }
+    baffle15g
+    {
+        //- Select faces and orientation through a searchableSurface
+        type        searchableSurface;
+        surface     searchablePlate;
+        origin      (75 0.3 372.2);
+        span        (0 0.7 3);
+        patches
+        {
+            master
+            {
+                //- Master side patch
+                name            baffle15;
+                type            wall;
+            }
+            slave
+            {
+                //- Slave side patch
+                ${..master}
+            }
+        }
+    }
+    baffle16g
+    {
+        //- Select faces and orientation through a searchableSurface
+        type        searchableSurface;
+        surface     searchablePlate;
+        origin      (80 0 372.2);
+        span        (0 0.7 3);
+        patches
+        {
+            master
+            {
+                //- Master side patch
+                name            baffle16;
+                type            wall;
+            }
+            slave
+            {
+                //- Slave side patch
+                ${..master}
+            }
+        }
+    }
+    baffle17g
+    {
+        //- Select faces and orientation through a searchableSurface
+        type        searchableSurface;
+        surface     searchablePlate;
+        origin      (85 0.3 372.2);
+        span        (0 0.7 3);
+        patches
+        {
+            master
+            {
+                //- Master side patch
+                name            baffle17;
+                type            wall;
+            }
+            slave
+            {
+                //- Slave side patch
+                ${..master}
+            }
+        }
+    }
+    baffle18g
+    {
+        //- Select faces and orientation through a searchableSurface
+        type        searchableSurface;
+        surface     searchablePlate;
+        origin      (90 0 372.2);
+        span        (0 0.7 3);
+        patches
+        {
+            master
+            {
+                //- Master side patch
+                name            baffle18;
+                type            wall;
+            }
+            slave
+            {
+                //- Slave side patch
+                ${..master}
+            }
+        }
+    }
+    baffle19g
+    {
+        //- Select faces and orientation through a searchableSurface
+        type        searchableSurface;
+        surface     searchablePlate;
+        origin      (95 0.3 372.2);
+        span        (0 0.7 3);
+        patches
+        {
+            master
+            {
+                //- Master side patch
+                name            baffle19;
+                type            wall;
+            }
+            slave
+            {
+                //- Slave side patch
+                ${..master}
+            }
+        }
+    }
+    baffle20g
+    {
+        //- Select faces and orientation through a searchableSurface
+        type        searchableSurface;
+        surface     searchablePlate;
+        origin      (100 0 372.2);
+        span        (0 0.7 3);
+        patches
+        {
+            master
+            {
+                //- Master side patch
+                name            baffle20;
+                type            wall;
+            }
+            slave
+            {
+                //- Slave side patch
+                ${..master}
+            }
+        }
+    }
+    baffle21g
+    {
+        //- Select faces and orientation through a searchableSurface
+        type        searchableSurface;
+        surface     searchablePlate;
+        origin      (105 0.3 372.2);
+        span        (0 0.7 3);
+        patches
+        {
+            master
+            {
+                //- Master side patch
+                name            baffle21;
+                type            wall;
+            }
+            slave
+            {
+                //- Slave side patch
+                ${..master}
+            }
+        }
+    }
+    baffle22g
+    {
+        //- Select faces and orientation through a searchableSurface
+        type        searchableSurface;
+        surface     searchablePlate;
+        origin      (110 0 372.2);
+        span        (0 0.7 3);
+        patches
+        {
+            master
+            {
+                //- Master side patch
+                name            baffle22;
+                type            wall;
+            }
+            slave
+            {
+                //- Slave side patch
+                ${..master}
+            }
+        }
+    }
+    baffle23g
+    {
+        //- Select faces and orientation through a searchableSurface
+        type        searchableSurface;
+        surface     searchablePlate;
+        origin      (115 0.3 372.2);
+        span        (0 0.7 3);
+        patches
+        {
+            master
+            {
+                //- Master side patch
+                name            baffle23;
+                type            wall;
+            }
+            slave
+            {
+                //- Slave side patch
+                ${..master}
+            }
+        }
+    }
+    baffle24g
+    {
+        //- Select faces and orientation through a searchableSurface
+        type        searchableSurface;
+        surface     searchablePlate;
+        origin      (120 0 372.2);
+        span        (0 0.35 3);
+        patches
+        {
+            master
+            {
+                //- Master side patch
+                name            baffle24;
+                type            wall;
+            }
+            slave
+            {
+                //- Slave side patch
+                ${..master}
+            }
+        }
+    }
+    baffle25g
+    {
+        //- Select faces and orientation through a searchableSurface
+        type        searchableSurface;
+        surface     searchablePlate;
+        origin      (120 0.65 372.2);
+        span        (0 0.35 3);
+        patches
+        {
+            master
+            {
+                //- Master side patch
+                name            baffle25;
+                type            wall;
+            }
+            slave
+            {
+                //- Slave side patch
+                ${..master}
+            }
+        }
+    }
+
+
+
+}
+
+
+// ************************************************************************* //

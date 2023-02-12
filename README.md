@@ -23,6 +23,10 @@ Here's a brief description:
 
   Two-phase open channel flow. It's a fork  of the original interFoam tutorial *waterChannel*. The *surfaces* function is configured to generate water surfaces (namely, the isosurfaces where *alpha.water* is equal to 0.5). 
 
+* **fishChannel**
+
+  A baffled open channel for fish migration in eco-hydraulic engineering. A combination of *blockMesh*, *topoSet*, *createBaffles*, *refineMesh*, *refineWallLayer* etc are used for geometry and mesh generation.
+
 * **cavitatingBullet**
 
   The simplified version of the original cavitatingBullet case. The initialization process using potentialFoam is removed in this version to show the basic usage of interPhaseChangeFoam. 

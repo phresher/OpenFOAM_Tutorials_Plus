@@ -1,0 +1,205 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      binary;
+    class       volScalarField;
+    location    "0";
+    object      k;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -2 0 0 0 0];
+
+internalField   uniform 0.0001;
+
+boundaryField
+{
+    inlet
+    {
+        type            fixedValue;
+        value           uniform 0.0001;
+    }
+    walls
+    {
+        type            kqRWallFunction;
+        value           uniform 0.0001;
+    }
+    outlet
+    {
+        type            inletOutlet;
+        inletValue      uniform 0.0001;
+        value           uniform 0.0001;
+    }
+    atmosphere
+    {
+        type            inletOutlet;
+        inletValue      uniform 0.0001;
+        value           uniform 0.0001;
+    }
+    outlet2
+    {
+        type            inletOutlet;
+        inletValue      uniform 0.0001;
+        value           uniform 0.0001;
+    }
+    baffle1
+    {
+        type            inletOutlet;
+        inletValue      uniform 0.0001;
+        value           uniform 0.0001;
+    }
+    baffle2
+    {
+        type            inletOutlet;
+        inletValue      uniform 0.0001;
+        value           uniform 0.0001;
+    }
+    baffle3
+    {
+        type            inletOutlet;
+        inletValue      uniform 0.0001;
+        value           uniform 0.0001;
+    }
+    baffle4
+    {
+        type            inletOutlet;
+        inletValue      uniform 0.0001;
+        value           uniform 0.0001;
+    }
+    baffle5
+    {
+        type            inletOutlet;
+        inletValue      uniform 0.0001;
+        value           uniform 0.0001;
+    }
+    baffle6
+    {
+        type            inletOutlet;
+        inletValue      uniform 0.0001;
+        value           uniform 0.0001;
+    }
+    baffle7
+    {
+        type            inletOutlet;
+        inletValue      uniform 0.0001;
+        value           uniform 0.0001;
+    }
+    baffle8
+    {
+        type            inletOutlet;
+        inletValue      uniform 0.0001;
+        value           uniform 0.0001;
+    }
+    baffle9
+    {
+        type            inletOutlet;
+        inletValue      uniform 0.0001;
+        value           uniform 0.0001;
+    }
+    baffle10
+    {
+        type            inletOutlet;
+        inletValue      uniform 0.0001;
+        value           uniform 0.0001;
+    }
+    baffle11
+    {
+        type            inletOutlet;
+        inletValue      uniform 0.0001;
+        value           uniform 0.0001;
+    }
+    baffle12
+    {
+        type            inletOutlet;
+        inletValue      uniform 0.0001;
+        value           uniform 0.0001;
+    }
+    baffle13
+    {
+        type            inletOutlet;
+        inletValue      uniform 0.0001;
+        value           uniform 0.0001;
+    }
+    baffle14
+    {
+        type            inletOutlet;
+        inletValue      uniform 0.0001;
+        value           uniform 0.0001;
+    }
+    baffle15
+    {
+        type            inletOutlet;
+        inletValue      uniform 0.0001;
+        value           uniform 0.0001;
+    }
+    baffle16
+    {
+        type            inletOutlet;
+        inletValue      uniform 0.0001;
+        value           uniform 0.0001;
+    }
+    baffle17
+    {
+        type            inletOutlet;
+        inletValue      uniform 0.0001;
+        value           uniform 0.0001;
+    }
+    baffle18
+    {
+        type            inletOutlet;
+        inletValue      uniform 0.0001;
+        value           uniform 0.0001;
+    }
+    baffle19
+    {
+        type            inletOutlet;
+        inletValue      uniform 0.0001;
+        value           uniform 0.0001;
+    }
+    baffle20
+    {
+        type            inletOutlet;
+        inletValue      uniform 0.0001;
+        value           uniform 0.0001;
+    }
+    baffle21
+    {
+        type            inletOutlet;
+        inletValue      uniform 0.0001;
+        value           uniform 0.0001;
+    }
+    baffle22
+    {
+        type            inletOutlet;
+        inletValue      uniform 0.0001;
+        value           uniform 0.0001;
+    }
+    baffle23
+    {
+        type            inletOutlet;
+        inletValue      uniform 0.0001;
+        value           uniform 0.0001;
+    }
+    baffle24
+    {
+        type            inletOutlet;
+        inletValue      uniform 0.0001;
+        value           uniform 0.0001;
+    }
+    baffle25
+    {
+        type            inletOutlet;
+        inletValue      uniform 0.0001;
+        value           uniform 0.0001;
+    }
+}
+
+
+// ************************************************************************* //
